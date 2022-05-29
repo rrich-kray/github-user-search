@@ -23,6 +23,7 @@
   border-radius: 15px;
   display: flex; 
   align-items: center;
+  
 }
 
 #search-bar input {
@@ -31,12 +32,14 @@
   background: transparent;
   border: none;
   font-size: 2rem;
+  margin-left: 10px;
+  color: rgba(100, 100, 100, 0.75)
 }
 
 #search-bar button {
   height: 3rem;
   width: 6rem;
-  margin-left:20px;
+  margin-left: 10px;
   border-radius: 12px;
   color: white;
   background: var(--secondary-clr1);
@@ -45,7 +48,7 @@
 
 #search-bar input:focus {
   border: none;
-  outline: none
+  outline: none;
 }
 
 #user-info-container {
@@ -68,4 +71,58 @@
 #username {
   position: absolute;
   left: 30%;
+  color: white;
+}
+
+#join-date {
+  position: absolute;
+  right: 5%;
+  top: 7.5%;
+  color: white
+}
+
+#bio {
+  position: absolute;
+  height: 10%;
+  width: 50%;
+  left: 30%;
+  top: 25%;
+  color: rgba(100, 100, 100, 0.75)
+}
+
+#stats-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  width: 60%;
+  min-width: 50%;
+  height: 75px;
+  background: var(--secondary-clr3);
+  color: rgba(100, 100, 100, 0.5);
+  border-radius: 12px;
+  left: 30%;
+  top: 55%;
+}
+
+.stat-box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+#other-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 75px;
+  width: 65%;
+  position: absolute;
+  bottom: 5%;
+  left: 30%
+}
+
+.other-stat {
+  margin: 5px;
+  text-align: center;
+  color: white
 }
