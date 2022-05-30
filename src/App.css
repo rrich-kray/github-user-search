@@ -192,7 +192,10 @@
 .other-stat {
   margin: 5px;
   text-align: center;
-  color: white
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 @media screen and (max-width: 980px) {
@@ -245,7 +248,7 @@
 
   #other-info {
     margin-top: 10px;
-    margin-bottom: 10px
+    margin-bottom: 10px;
   }
 
 }
