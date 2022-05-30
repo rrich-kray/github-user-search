@@ -96,7 +96,6 @@ function App() {
     <Provider store={store}>
       <div id="app">
         <div id="content-container">
-          <div id="theme-toggle"></div>
           <div id="info-bar">
             <div id="switch">
               <div id="knob"></div>
@@ -146,7 +145,7 @@ function App() {
                   </span>
                 </div>
                 <div id="following" className="stat-box">
-                  <span>Repos</span>
+                  <span>Following</span>
                   <span style={{ color: "white", fontSize: "1.5rem" }}>
                     {currentUser.following}
                   </span>
@@ -159,8 +158,14 @@ function App() {
                     ? "Not Available"
                     : currentUser.twitter_username}
                 </span>
-                <span className="other-stat">{currentUser.blog}</span>
-                <span className="other-stat"></span>
+                <a
+                  className="other-stat"
+                  href={currentUser.blog}
+                  alt="blog-link"
+                >
+                  Link to Blog
+                </a>
+                <span className="other-stat">Placeholder</span>
               </div>
             </div>
           </div>

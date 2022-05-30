@@ -23,33 +23,35 @@
 #switch {
   border: 1px solid black;
   border-radius: 30px;
+  position: relative;
   height: 30px;
-  width: 75px;;
+  width: 75px;
   transition: 1s linear
 }
 
 #knob {
   border: 1px solid black;
   border-radius: 50%;
+  position: absolute;
   height: 100%;
   width: 40%;
   left: 0%;
 }
 
-#switch:hover > #knob {
+#switch:hover #knob {
   right: 0%;
 }
 
 #search-bar {
   width: 100%;
-  height: 150px;
+  height: 100px;
   /* padding: 20px; */
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   background: var(--secondary-clr2);
   border-radius: 15px;
   display: flex;
   align-items: center;
-  position: relative
+  position: relative;
 }
 
 #search-bar input {
@@ -184,64 +186,58 @@
 }
 
 @media screen and (max-width: 980px) {
-  #app {
-    height: 100vh;
-    width: 100vw;
-    /* overflow-x: scroll */
+  #content-container {
+    max-height: 100vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: column
   }
 
-  #content-container {
-   height: 90%;   
-    width: 90%;
-    /* overflow-x: hidden; */
-    /* overflow-y: scroll; */
+  #search-bar {
+    height: 20%
   }
 
   #user-info-container {
+    display: flex;
+    flex-direction: column;
     height: 100%;
-    width: 100%;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    height: 80%;
+  }
+
+  #avatar-container {
+    height: 20%;
+    
   }
 
   #avatar {
-    position: relative;
-    width: 90%;
-    height: auto
+    height: 100%;
+    width: auto
   }
 
-  #username {
-    position: relative;
-    width: 100%;
-  }
-
-  #join-date {
-    position: relative;
-    width: 100%;
-    left: 25%;
-    top: 0% 
+  #user-info-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    overflow: scroll
   }
 
   #bio {
-    position: relative;
-    left: 0%;
-    width: 100%;
-    padding: 10px;
-    top: 0%
+    text-align: center;
   }
 
   #stats-container {
-    position: relative;
-    top: 5%;
-    left: 5%;
-    width: 90%
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px
   }
 
   #other-info {
-    position: relative;
-    top: 10%;
-    left: 15%;
+    margin-top: 10px;
+    margin-bottom: 10px
   }
+
 }
 
 @media screen and (max-width: 768px) {}
