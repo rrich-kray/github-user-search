@@ -9,9 +9,7 @@ function App() {
   const fetchUser = async () => {
     const res = await fetch(api);
     res.json().then((userObj) => {
-      console.log(userObj);
       changeCurrentUser(userObj);
-      console.log(currentUser);
     });
   };
 
@@ -73,8 +71,8 @@ function App() {
       hour = 12;
     }
 
-    const minutes = dateObj.getMinutes() < 10 ? "0" : "" + dateObj.getMinutes();
-    const periodOfDay = dateObj.getHours() >= 12 ? "pm" : "am";
+    // const minutes = dateObj.getMinutes() < 10 ? "0" : "" + dateObj.getMinutes();
+    // const periodOfDay = dateObj.getHours() >= 12 ? "pm" : "am";
     const formattedTimeStamp = `${formattedMonth} ${dayOfMonth}, ${year}`;
 
     return formattedTimeStamp;
@@ -94,13 +92,22 @@ function App() {
           </button>
         </div>
         <div id="user-info-container">
-          <img id="avatar" src={currentUser.avatar_url} alt="avatar"></img>
-          <h1 id="username">{currentUser.login}</h1>
-          <span id="join-date">
+          <img
+            id="avatar"
+            className="user-item"
+            src={currentUser.avatar_url}
+            alt="avatar"
+          ></img>
+          <h1 id="username" className="user-item">
+            {currentUser.login}
+          </h1>
+          <span id="join-date" className="user-item">
             Joined at: {formatDate(currentUser.created_at)}
           </span>
-          <p id="bio">{!currentUser.bio ? "No Bio Found" : currentUser.bio}</p>
-          <div id="stats-container">
+          <p id="bio" className="user-item">
+            {!currentUser.bio ? "No Bio Found" : currentUser.bio}
+          </p>
+          <div id="stats-container" className="user-item">
             <div id="repos" className="stat-box">
               <span>Repos</span>
               <span style={{ color: "white", fontSize: "1.5rem" }}>
@@ -120,7 +127,7 @@ function App() {
               </span>
             </div>
           </div>
-          <div id="other-info">
+          <div id="other-info" className="user-item">
             <span className="other-stat">{currentUser.location}</span>
             <span className="other-stat">
               {!currentUser.twitter_username

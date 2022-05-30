@@ -4,7 +4,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--secondary-clr3)
+  background: var(--secondary-clr3);
+  overflow: scroll
 }
 
 #content-container {
@@ -31,7 +32,7 @@
   width: 80%;
   background: transparent;
   border: none;
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-left: 10px;
   color: rgba(100, 100, 100, 0.75)
 }
@@ -56,7 +57,7 @@
   height: 85%;
   width: 100%;
   border-radius: 15px;
-  position: relative
+  position: relative;
 }
 
 #avatar {
@@ -126,3 +127,65 @@
   text-align: center;
   color: white
 }
+
+@media screen and (max-width: 980px) {
+  #app {
+    height: 100vh;
+    width: 100vw;
+    /* overflow-x: scroll */
+  }
+
+  #content-container {
+   height: 90%;   
+    width: 90%;
+    /* overflow-x: hidden; */
+    /* overflow-y: scroll; */
+  }
+
+  #user-info-container {
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+  }
+
+  #avatar {
+    position: relative;
+    width: 90%;
+    height: auto
+  }
+
+  #username {
+    position: relative;
+  }
+
+  #join-date {
+    position: relative;
+    left: 25%;
+    top: 0% 
+  }
+
+  #bio {
+    position: relative;
+    left: 0%;
+    width: 100%;
+    padding: 10px;
+    top: 0%
+  }
+
+  #stats-container {
+    position: relative;
+    top: 5%;
+    left: 20%;
+
+  }
+
+  #other-info {
+    position: relative;
+    top: 10%;
+    left: 15%;
+  }
+}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 480px) {}
