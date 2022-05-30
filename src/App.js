@@ -112,52 +112,56 @@ function App() {
             </button>
           </div>
           <div id="user-info-container">
-            <img
-              id="avatar"
-              className="user-item"
-              src={currentUser.avatar_url}
-              alt="avatar"
-            ></img>
-            <h1 id="username" className="user-item">
-              {currentUser.login}
-            </h1>
-            <span id="join-date" className="user-item">
-              {currentUser.created_at
-                ? `Joined at: ${formatDate(currentUser.created_at)}`
-                : ""}
-            </span>
-            <p id="bio" className="user-item">
-              {!currentUser.bio ? "No Bio Found" : currentUser.bio}
-            </p>
-            <div id="stats-container" className="user-item">
-              <div id="repos" className="stat-box">
-                <span>Repos</span>
-                <span style={{ color: "white", fontSize: "1.5rem" }}>
-                  {currentUser.public_repos}
-                </span>
-              </div>
-              <div id="followers" className="stat-box">
-                <span>Repos</span>
-                <span style={{ color: "white", fontSize: "1.5rem" }}>
-                  {currentUser.followers}
-                </span>
-              </div>
-              <div id="following" className="stat-box">
-                <span>Repos</span>
-                <span style={{ color: "white", fontSize: "1.5rem" }}>
-                  {currentUser.following}
-                </span>
-              </div>
+            <div id="avatar-container">
+              <img
+                id="avatar"
+                className="user-item"
+                src={currentUser.avatar_url}
+                alt="avatar"
+              ></img>
             </div>
-            <div id="other-info" className="user-item">
-              <span className="other-stat">{currentUser.location}</span>
-              <span className="other-stat">
-                {!currentUser.twitter_username
-                  ? "Not Available"
-                  : currentUser.twitter_username}
+            <div id="user-info-section">
+              <h1 id="username" className="user-item">
+                {currentUser.login}
+              </h1>
+              <span id="join-date" className="user-item">
+                {currentUser.created_at
+                  ? `Joined at: ${formatDate(currentUser.created_at)}`
+                  : ""}
               </span>
-              <span className="other-stat">{currentUser.blog}</span>
-              <span className="other-stat"></span>
+              <p id="bio" className="user-item">
+                {!currentUser.bio ? "No Bio Found" : currentUser.bio}
+              </p>
+              <div id="stats-container" className="user-item">
+                <div id="repos" className="stat-box">
+                  <span>Repos</span>
+                  <span style={{ color: "white", fontSize: "1.5rem" }}>
+                    {currentUser.public_repos}
+                  </span>
+                </div>
+                <div id="followers" className="stat-box">
+                  <span>Repos</span>
+                  <span style={{ color: "white", fontSize: "1.5rem" }}>
+                    {currentUser.followers}
+                  </span>
+                </div>
+                <div id="following" className="stat-box">
+                  <span>Repos</span>
+                  <span style={{ color: "white", fontSize: "1.5rem" }}>
+                    {currentUser.following}
+                  </span>
+                </div>
+              </div>
+              <div id="other-info" className="user-item">
+                <span className="other-stat">{currentUser.location}</span>
+                <span className="other-stat">
+                  {!currentUser.twitter_username
+                    ? "Not Available"
+                    : currentUser.twitter_username}
+                </span>
+                <span className="other-stat">{currentUser.blog}</span>
+                <span className="other-stat"></span>
+              </div>
             </div>
           </div>
         </div>
