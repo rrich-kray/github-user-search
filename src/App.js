@@ -100,6 +100,10 @@ function App() {
             <div id="switch">
               <div id="knob"></div>
             </div>
+            {/* <div id="theme-info">
+              <img src={require("./assets/moon.svg").default}></img>
+              <span>light</span>
+            </div> */}
           </div>
           <div id="search-bar">
             <input
