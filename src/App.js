@@ -20,6 +20,9 @@ function App() {
   const [search, updateSearch] = useState("");
   const api = `https://api.github.com/users/${search}`;
 
+  // const theme = useSelector((state) => state.theme);
+  // const dispatch = useDispatch();
+
   const fetchUser = async () => {
     const res = await fetch(api);
     res.json().then((userObj) => {
@@ -167,7 +170,7 @@ function App() {
                   href={currentUser.blog}
                   alt="blog-link"
                 >
-                  Link to Blog
+                  {currentUser.blog ? "Link to blog" : "Not provided"}
                 </a>
                 <span className="other-stat">Placeholder</span>
               </div>
